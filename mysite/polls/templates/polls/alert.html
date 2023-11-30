@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url '/alert' %}" method="POST" class="sc">
+    <!--action参数传到对应的url地址，method为post时是提交
+    后段根据name提取数据
+    -->
+    <div class='Sc'>
+
+        <h2>alert student and course information</h2>
+        <p>use sno & cno to alert their credit</p>
+        <label>
+            <span>student number</span>
+            <input id="sc_sno" name='sc_sno' type="text" placeholder="please input who student"/>
+        </label>
+        <br>
+        <label>
+            <span>course number</span>
+            <input id="sc_cno" name='sc_cno' type="text" placeholder="please input which course"/>
+        </label>
+        <br>
+        <label>
+            <span>credit</span>
+            <input id="sc_credit" name="sc_credit" type="number" placeholder="please input credit"/>
+        </label>
+        <br>
+        <label>
+            <input type="submit" class="button" value="submit"/>
+        </label>
+        <br>
+    </div>
+{% csrf_token %}
+</form>
+<a href="http://127.0.0.1:8000/polls/">
+    <button>
+    click me to back homepage
+    </button>
+</a>
+</body>
+</html>

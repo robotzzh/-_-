@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>this page is delete page</h1>
+</body>
+<form action="{%url '/delete' %}" method="POST" class="sc1">
+    <div class="sc1">
+        <h2>select from sc</h2>
+        <label>
+            <span>student number</span>
+            <input id="sc_sno" name='sc_sno' type="text" placeholder="please input sno or *"/>
+        </label>
+        <label>
+            <input type="submit" class="button" value="submit"/>
+        </label>
+        <br>
+    </div>
+{% csrf_token %}
+</form>
+<a href="http://127.0.0.1:8000/polls/">
+    <button>
+    click me to back homepage
+    </button>
+</a>
+</html>
